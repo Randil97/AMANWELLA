@@ -128,21 +128,22 @@
         <div class="site-block-half d-flex bg-white" data-aos="fade-up" data-aos-delay="100">
           <a href="#" class="image d-block bg-image" style="background-image: url('img/Room/IMG_9890.JPG');"></a>
           <div class="text">
-            <span class="d-block"><span class="display-4 text-primary">$99</span> / per night </span>
-            <h2>Ocean Hill Pool Suite - King Bed</h2>
-            <p class="lead">100-square-metre (1,976-square-feet) <br>
+            <span class="d-block"><span class="display-4 text-primary">Lkr.40000</span> / per day  </span>
+            <h2>Ocean Hill Luxery Room - King Bed</h2>
+            <p class="lead">3 meals for all <br>
+            				Maximum 4 members <br>
 							Sea and treetop views<br>
 							Private courtyard with plunge pool (6m x 4m)<br>
 							Terrace with double sun lounger<br>
 							Outdoor banquette for lounging and dining<br>
 							Outdoor dining table with two chairs<br>
-							King-size bed<br>
+							King-size 2 bed<br>
 							Writing desk, daybed, armchair with kithul wood table<br>
 							Bathroom with free-standing bathtub, twin vanities, dressing area<br>
 							Separate shower/toilet<br>
 							WiFi, sound system, safe<br>
 							Personal bar<br>
-							Spa treatments available in-room<br> </p>
+						 </p>
                  
           </div>
         </div>
@@ -192,8 +193,6 @@
             <!-- END slider -->
           </div>
 
-          <div class="col-md-12 text-center"><a href="#" class="">View More Photos</a></div>
-        
         </div>
       </div>
     </section>

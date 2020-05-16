@@ -197,7 +197,7 @@
                                 </div>
                                 <div class="form-input">
                                     <label for="cardno">Rooms Rent</label>
-                                    <input type="text" name="room_rent" id="room_rent" value= "LKR. ${obj.getRoom_count()*obj.getNum_of_days()*50000}" required="required" readonly="readonly"/>
+                                    <input type="text" name="room_rent" id="room_rent" value= "Lkr. ${obj.getRoom_count()*obj.getNum_of_days()*40000}" required="required" readonly="readonly"/>
                                 </div>
                                 <div class="form-input">
                                     <label for="cardno">Card Number</label>

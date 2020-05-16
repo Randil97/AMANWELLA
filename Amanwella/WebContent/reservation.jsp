@@ -167,9 +167,6 @@
             </div>
             <!-- END slider -->
           </div>
-
-          <div class="col-md-12 text-center"><a href="#" class="">View More Photos</a></div>
-        
         </div>
         
          <section class="section blog-post-entry bg-light">
