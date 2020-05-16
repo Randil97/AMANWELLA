@@ -37,6 +37,10 @@ public class reservationEdit_Servlet extends HttpServlet {
 		
 		String btnType = request.getParameter("btn");
 		
+		if(btnType == null) {
+			btnType = "Delete";
+		}
+		
 		String reservation_type = request.getParameter("reservation_type");
 		String reservation_id = request.getParameter("reservation_id");
 		String check_in = request.getParameter("checkin_date");
@@ -98,7 +102,8 @@ public class reservationEdit_Servlet extends HttpServlet {
 				 */
 				
 				  reservationDao.Delete(id); out.println("<script type=\"text/javascript\">");
-				  out.print("alert('Delete Success.');"); out.println("location='index.jsp'");
+				  //out.print("alert('Delete Success.');"); 
+				  out.println("location='index.jsp'");
 				  out.println("</script>");
 				 
 				 

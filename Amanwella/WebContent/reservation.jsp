@@ -18,6 +18,7 @@
     
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 
   
     <!-- Theme Style -->
@@ -26,7 +27,7 @@
     
     <link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/travel.css">
-	<link rel="stylesheet" href="css/room.css"> 
+	<!--  <link rel="stylesheet" href="css/room.css"> -->
 	<link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -53,7 +54,7 @@
     <jsp:include page="header.jsp"></jsp:include>
     
 
-    <section class="site-hero inner-page overlay" style="background-image: url(img/slider-5.JPG)" data-stellar-background-ratio="0.5">
+    <section class="site-hero inner-page overlay" style="background-image: url(img/IMG_9993.JPG)" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center text-center">
           <div class="col-md-10 text-center" data-aos="fade-up">
@@ -75,7 +76,7 @@
         <div class="row">
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
             
-            <form action="reservationEdit_Servlet" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+            <form action="reservationEdit_Servlet" id="formReservation" method="post" class="bg-white p-md-5 p-4 mb-5 border">
             <input type="hidden" name="status" value="${obj.getStatus()}">
             <input type="hidden" name="number_of_days" value="${obj.getNum_of_days()}">
          	<input type="hidden" name="reservation_type" value="executive_room">
@@ -123,7 +124,7 @@
               
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="submit" value="Delete" name="btn" class="btn btn-primary text-white py-3 px-5">
+                  <input type="button" value="Delete" id="btnDelete" name="btn" class="btn btn-primary text-white py-3 px-5">
                 </div>
               </div>
               
@@ -294,7 +295,40 @@
     
     <script src="js/bootstrap-datepicker.js"></script> 
     <script src="js/jquery.timepicker.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
     <script src="js/main.js"></script>
+    
+    <script type="text/javascript">
+    	
+    	$(document).ready(function() {
+    		$("#btnDelete").click(function(){
+    			console.log('sdsds');
+    			$.confirm({
+    			    title: 'Confirm!',
+    			    content: 'Are you sure want to Delete ?',
+    			    buttons: {
+    			        confirm: function () {
+    			        	var input = $("<input>")
+    			               .attr("type", "hidden")
+    			               .attr("name", "btn").val("Delete");
+    			        	$('#formReservation').append(input);
+    			        	$("#formReservation").submit();
+    			        },
+    			        cancel: function () {
+    			            return;
+    			        }
+    			    }
+    			});
+    	    }); 
+    		
+    		function deleteSuccess(){
+    			$.alert({
+    			    title: 'Success!',
+    			    content: 'Simple alert!',
+    			});
+    		}
+    	});
+    </script>
   </body>
 </html>
